@@ -11,6 +11,9 @@ spec:
     volumeMounts:
     - name: app
       mountPath: /app
+  - name: ecka-app
+    image: busybox
+    command: ['sh', '-c', 'echo Hello Kubernetes! && sleep 30']
   initContainers:
   - name: init
     image: busybox
